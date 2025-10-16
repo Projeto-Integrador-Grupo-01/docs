@@ -1,0 +1,502 @@
+type: collection.insomnia.rest/5.0
+name: Sabor Local
+meta:
+  id: wrk_7cd024d9bc924725a7fd445ba1430ae8
+  created: 1760625642147
+  modified: 1760625642147
+  description: ""
+collection:
+  - name: Produtos
+    meta:
+      id: fld_6d2fbe365ed14d84a659f94be81e3696
+      created: 1760625656383
+      modified: 1760625696491
+      sortKey: -1760625656383
+      description: ""
+    children:
+      - url: http://localhost:8080/produtos
+        name: Listar Todos
+        meta:
+          id: req_7dd4794971da43ada61041a1f4b0e441
+          created: 1760625663335
+          modified: 1760625839018
+          isPrivate: false
+          description: ""
+          sortKey: -1760625663336
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/nome/massa
+        name: Procurar Por Nome
+        meta:
+          id: req_6e7ffe6ab8f4493484e74d425fa427c3
+          created: 1760626003658
+          modified: 1760641547855
+          isPrivate: false
+          description: ""
+          sortKey: -1760626003658
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/1
+        name: Procurar Por ID
+        meta:
+          id: req_e3d69fdd5dbc484bbfa0df12814a395f
+          created: 1760626114915
+          modified: 1760641589876
+          isPrivate: false
+          description: ""
+          sortKey: -1760626114915
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Atualizar Produto
+        meta:
+          id: req_dd5f56428d1549e4a4b15d08de4f3e09
+          created: 1760626221496
+          modified: 1760641704127
+          isPrivate: false
+          description: ""
+          sortKey: -1760626221496
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"id": 6,
+            	"nome": "Pera Verde",
+            	"descricao": "Massa artesanal é feita com ingredientes frescos e de alta qualidade, como farinha e ovos, utilizando técnicas tradicionais e um toque pessoal, resultando em uma textura e sabor superiores.",
+            	"preco": 15.00,
+            	"quantidade": 200,
+            	"foto": "https://ik.imagekit.io/5qjemq96e/Projeto1%20-%20delivery/macarrao_artesanal.webp?updatedAt=1760625833182",
+            	"categoria": {
+            		"id": 4
+            	},
+            	"produtor": {
+            		"id": 3
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/6
+        name: Apagar Produto
+        meta:
+          id: req_873926e587b74b7ba7d345fe48bc6f0e
+          created: 1760626325706
+          modified: 1760641722682
+          isPrivate: false
+          description: ""
+          sortKey: -1760626325706
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Criar Produto
+        meta:
+          id: req_4d0105af025445c9b6b63fc2ade4d8e1
+          created: 1760626566202
+          modified: 1760641669151
+          isPrivate: false
+          description: ""
+          sortKey: -1760626168205.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"nome": "Maça Verde",
+            	"descricao": "Massa artesanal é feita com ingredientes frescos e de alta qualidade, como farinha e ovos, utilizando técnicas tradicionais e um toque pessoal, resultando em uma textura e sabor superiores.",
+            	"preco": 15.00,
+            	"quantidade": 200,
+            	"foto": "https://ik.imagekit.io/5qjemq96e/Projeto1%20-%20delivery/macarrao_artesanal.webp?updatedAt=1760625833182",
+            	"categoria": {
+            		"id": 4
+            	},
+            	"produtor": {
+            		"id": 3
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Categorias
+    meta:
+      id: fld_863d13ccb953438bba7a1e1dd0b245c6
+      created: 1760628012780
+      modified: 1760628012780
+      sortKey: -1760535721119.5
+      description: ""
+    children:
+      - url: http://localhost:8080/categorias
+        name: Listar Todas
+        meta:
+          id: req_d719750d29ce49b19480e0bf484a3145
+          created: 1760628012780
+          modified: 1760629546725
+          isPrivate: false
+          description: ""
+          sortKey: -1760625663336
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/1
+        name: Procurar Por ID
+        meta:
+          id: req_68b5742b24cc4864b1944875674bbf3a
+          created: 1760628012781
+          modified: 1760629806098
+          isPrivate: false
+          description: ""
+          sortKey: -1760626114915
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/nome/massa
+        name: Procurar Por Nome
+        meta:
+          id: req_9258eb41cad9442db96294b484a3da8b
+          created: 1760628012781
+          modified: 1760630374043
+          isPrivate: false
+          description: ""
+          sortKey: -1760626003658
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias
+        name: Atualizar Categoria
+        meta:
+          id: req_5cd67f7cee024ce99e6a7b9bad278127
+          created: 1760628012782
+          modified: 1760630617491
+          isPrivate: false
+          description: ""
+          sortKey: -1760626221496
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": 5,
+            	"nome": "Ovos Caipiras Update"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias
+        name: Criar Categoria
+        meta:
+          id: req_a756540aaec74801accb96b6d02daaa0
+          created: 1760628012783
+          modified: 1760630505280
+          isPrivate: false
+          description: ""
+          sortKey: -1760626168205.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Frutas"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/7
+        name: Apagar Categoria
+        meta:
+          id: req_dcd883ec1f964f028cd8f3b603315e48
+          created: 1760628012783
+          modified: 1760630544962
+          isPrivate: false
+          description: ""
+          sortKey: -1760626325706
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Produtores
+    meta:
+      id: fld_93a1fd44025a473f8a72bed9bd0d664c
+      created: 1760628077678
+      modified: 1760628077678
+      sortKey: -1760580688751.25
+      description: ""
+    children:
+      - url: http://localhost:8080/produtores
+        name: Listar Todos
+        meta:
+          id: req_cbd04b3004c64666a79cae89f0b17d34
+          created: 1760628077679
+          modified: 1760628719211
+          isPrivate: false
+          description: ""
+          sortKey: -1760625663336
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtores/nome/maria
+        name: Procurar Por Nome
+        meta:
+          id: req_1edc38f562e8450fa5d0ebc173765570
+          created: 1760628077680
+          modified: 1760628310874
+          isPrivate: false
+          description: ""
+          sortKey: -1760626003658
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtores/1
+        name: Procurar Por ID
+        meta:
+          id: req_cc788387eb894dad9befee9d0bb466c8
+          created: 1760628077680
+          modified: 1760629791007
+          isPrivate: false
+          description: ""
+          sortKey: -1760626114915
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtores
+        name: Criar Produtor
+        meta:
+          id: req_1c1548766201409dad018eddaab18e1a
+          created: 1760628077681
+          modified: 1760629407123
+          isPrivate: false
+          description: ""
+          sortKey: -1760626168205.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"nome": "Odete Roitman",
+            	"descricao": "Fornecedora de ovos caipira",
+            	"email": "odeteroitman@gmail.com",
+            	"telefone": "11999977733", 
+            	"foto": "https://ik.imagekit.io/4xxm3hups/Foto%20Cristina(1).jpg?updatedAt=1760624407770"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtores/7
+        name: Apagar Produtor
+        meta:
+          id: req_a3a58dc85b204a8a8048767b34c0de3b
+          created: 1760628077681
+          modified: 1760628919735
+          isPrivate: false
+          description: ""
+          sortKey: -1760626325706
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtores
+        name: Atualizar Produtor
+        meta:
+          id: req_ffc84766557b4fbd8d73f8970fe1ce74
+          created: 1760628077681
+          modified: 1760628999370
+          isPrivate: false
+          description: ""
+          sortKey: -1760626221496
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"id": 2,
+            	"nome": "João Roque Update",
+            	"descricao": "Produtor de legumes organicos",
+            	"email": "joaoroque@gmail.com",
+            	"telefone": "11999977755",
+            	"foto": "https://ik.imagekit.io/4xxm3hups/João%20Roque.jpg?updatedAt=1760625390637"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_6e7f6b02d34945a2a2f78959f507a1ae456de54f
+    created: 1760625642151
+    modified: 1760625642151
+environments:
+  name: Base Environment
+  meta:
+    id: env_6e7f6b02d34945a2a2f78959f507a1ae456de54f
+    created: 1760625642150
+    modified: 1760625642150
+    isPrivate: false
