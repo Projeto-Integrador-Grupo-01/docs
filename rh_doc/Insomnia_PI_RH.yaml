@@ -1,0 +1,537 @@
+type: collection.insomnia.rest/5.0
+name: PI - RH
+meta:
+  id: wrk_1f56d6e12f85461aa0c9e8e4aedb636c
+  created: 1761155475570
+  modified: 1761155475570
+  description: ""
+collection:
+  - name: Departamentos
+    meta:
+      id: fld_7f5c515f2567495297369fbfa9f73612
+      created: 1760709191873
+      modified: 1761142105172
+      sortKey: -1760443094708
+      description: ""
+    children:
+      - url: http://localhost:8080/departamentos
+        name: Listar Departamentos
+        meta:
+          id: req_1d55b8c4172a435b91791e35ae228c6a
+          created: 1760709191876
+          modified: 1761142893918
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316945
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/departamentos/nome/Marketing
+        name: Depart Por Nome
+        meta:
+          id: req_c654aa8221b044bdb74dd3c5183c794f
+          created: 1760709191877
+          modified: 1761184902986
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316940.3125
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/departamentos
+        name: Criar Departamentos
+        meta:
+          id: req_e22b3655253642de9230497168e37542
+          created: 1760709191879
+          modified: 1761157044567
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316938.75
+        method: POST
+        body:
+          mimeType: application/json
+          text: >
+            {
+              "nome": "Engenharia",
+              "icone": "https://ik.imagekit.io/0wyyadtva/RH_PI/engenharia.png?updatedAt=1761146278000"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/departamentos/13
+        name: Deletar Departamentos  Id
+        meta:
+          id: req_62adfa34849b4f76a45e74dbf380f94b
+          created: 1760709191882
+          modified: 1761184925164
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316870
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/departamentos/13
+        name: Departamentos id
+        meta:
+          id: req_bc9a5d50d3e74d12aa76aa9481327218
+          created: 1760709191883
+          modified: 1761184928798
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316941.875
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/departamentos
+        name: Atualizar Departamentos
+        meta:
+          id: req_d4145451183441ba8f1f7333f5634236
+          created: 1761144707458
+          modified: 1761184915450
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316935.625
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >
+            {
+              "id": 13,
+              "nome": "Engenharia Edit",
+              "icone": "https://ik.imagekit.io/0wyyadtva/RH_PI/recursos-humanos.png?updatedAt=1761146278322"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Usuarios
+    meta:
+      id: fld_449c4e872b4f4cf6a938ccc17d9c98f4
+      created: 1760732385802
+      modified: 1761181381065
+      sortKey: -1760443094695.5
+      description: ""
+    children:
+      - url: http://localhost:8080/usuarios
+        name: Listar Todos Usuarios
+        meta:
+          id: req_8d5dee6953914904b23170ceb1d3f454
+          created: 1760732385804
+          modified: 1761143207957
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316945
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/cadastrar
+        name: Criar Usuarios
+        meta:
+          id: req_bcce1ce2a8364067916f96d3ce94a30d
+          created: 1760732385807
+          modified: 1761185058497
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316920
+        method: POST
+        body:
+          mimeType: application/json
+          text: "\t{
+
+            \t\t\"email\": \"admin3@empresa.com\",
+
+            \t\t\"foto\": \"url\",
+
+            \t\t\"nome\": \"Administrador X\",
+
+            \t\t\"senha\": \"12345678\"
+
+            \t}
+
+            \ "
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/4
+        name: Usuarios por Id
+        meta:
+          id: req_58572b92aa664e3c926fb05f932cf10a
+          created: 1760732385810
+          modified: 1761185368238
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316932.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/atualizar
+        name: Atualizar Usuarios
+        meta:
+          id: req_907f3795a582451d8fc28d722ac803fc
+          created: 1761141955476
+          modified: 1761185402364
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316895
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            	{
+            		"id": 12,
+            		"nome": "Administrador loop",
+            		"foto": "url",
+            		"email": "admin@empresa.com",
+            		"senha": "123456789"
+            	}
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/nome/Cristina
+        name: Usuarios por Nome
+        meta:
+          id: req_4ac41a6e5b244fdcba56df265f747360
+          created: 1761185258550
+          modified: 1761185382322
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316926.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Colaboradores
+    meta:
+      id: fld_2cc59205a4204c6895f76011fe76d287
+      created: 1761142973677
+      modified: 1761142988341
+      sortKey: -1760443094808
+      description: ""
+    children:
+      - url: http://localhost:8080/colaboradores
+        name: Listar Colaboradores
+        meta:
+          id: req_3b986e162b5d48618559d35b091ec0d4
+          created: 1761142973679
+          modified: 1761229730944
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316888.75
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/colaboradores/nome/Laura
+        name: Colaboradores Por Nome
+        meta:
+          id: req_d5ab9b79ae4f44649dec17a8c71bc815
+          created: 1761142973681
+          modified: 1761244040421
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316865.3125
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/colaboradores
+        name: Criar Colaboradores
+        meta:
+          id: req_e63ec12a8da848f0bc934823cdb1d031
+          created: 1761142973682
+          modified: 1761184199886
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316920
+        method: POST
+        body:
+          mimeType: application/json
+          text: " {
+
+            \t\"nome\": \"Teste Novo\",
+
+            \t\"email\": \"teste.novo@empresa.com\",
+
+            \t\"dtNasc\": \"1992-11-10\",
+
+            \t\"cargo\": \"Desenvolvedora Backend\",
+
+            \t\"salario\": 8000.00,
+
+            \t\"foto\":
+            \"https://ik.imagekit.io/5qjemq96e/blog/10.jpg?updatedAt=1761068064\
+            554\",
+
+            \t\"departamento\": {
+
+            \t\t\"id\": 3
+
+            \ }\t\ 
+
+            \t\t\ 
+
+            }
+
+            \ "
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/colaboradores/17
+        name: Deletar Colaboradores  Id
+        meta:
+          id: req_e20adbd12fd84eb693b1c7a5dc78a760
+          created: 1761142973684
+          modified: 1761242585483
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316745
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/colaboradores/17
+        name: Colaboradores id
+        meta:
+          id: req_19a1c4360ba34151bced740c26c65419
+          created: 1761142973686
+          modified: 1761242574273
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316873.125
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/colaboradores
+        name: Atualizar Colaboradores
+        meta:
+          id: req_0daf3f7c033c48319d287f6e05ee333f
+          created: 1761144637989
+          modified: 1761244060649
+          isPrivate: false
+          description: ""
+          sortKey: -1760443316857.5
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"id": 17,
+            	"nome": "Teste Novo Editado",
+            	"email": "teste.novo@empresa.com",
+            	"dtNasc": "1992-11-10",
+            	"cargo": "Desenvolvedora Backend",
+            	"salario": 8000.00,
+            	"foto": "https://ik.imagekit.io/5qjemq96e/blog/10.jpg?updatedAt=1761068064554",
+            	"departamento": {
+            		"id": 3
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Calcular Salario
+    meta:
+      id: fld_a9cbd0b186934f0080f2b565032cfd2a
+      created: 1761239165802
+      modified: 1761239165802
+      sortKey: -1761239165802
+      description: ""
+    children:
+      - url: http://localhost:8080/colaboradores/calcularsalario/2
+        name: Calcular Salario
+        meta:
+          id: req_9130d75c12c04564b759c78c56a25059
+          created: 1761239172201
+          modified: 1761246407503
+          isPrivate: false
+          description: ""
+          sortKey: -1761239172202
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"tHorasExtras": 10,
+            	"valorHora": 25.50,
+            	"descontos": 150.00
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_a2ebe46280f7fec6505306ff552a3b5096bf1705
+    created: 1761155475588
+    modified: 1761155475588
+environments:
+  name: Base Environment
+  meta:
+    id: env_a2ebe46280f7fec6505306ff552a3b5096bf1705
+    created: 1761155475578
+    modified: 1761155475578
+    isPrivate: false
