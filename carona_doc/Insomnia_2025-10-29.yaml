@@ -1,0 +1,1266 @@
+type: collection.insomnia.rest/5.0
+name: Go Together
+meta:
+  id: wrk_76a0575c3e464d55ab0631f19916c0e7
+  created: 1761746050704
+  modified: 1761746050704
+  description: ""
+collection:
+  - name: LOCAL
+    meta:
+      id: fld_1bd2bf42bc6049e5b3e2dbd6b743cde7
+      created: 1761503499712
+      modified: 1761757919017
+      sortKey: -1761503499712
+      description: ""
+    children:
+      - name: Viagens
+        meta:
+          id: fld_49911c016291407a98c25b10e8d29e1c
+          created: 1760443097714
+          modified: 1761745247136
+          sortKey: -1761503512272
+          description: ""
+        children:
+          - url: http://localhost:8080/viagens/1
+            name: Procurar por ID
+            meta:
+              id: req_2ff7aa67846a402296e9ab36d8a653fc
+              created: 1760445262669
+              modified: 1761754605617
+              isPrivate: false
+              description: ""
+              sortKey: -1760418523444.5
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_1c203921de5746fa98670d3a05ddfc0a
+              - name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_1c3bcf1db40748a49db4c439bf852a92
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/viagens
+            name: Atualizar Postagem
+            meta:
+              id: req_8212a5e18ae5498eab16b692dd216f65
+              created: 1760452604982
+              modified: 1761754699690
+              isPrivate: false
+              description: ""
+              sortKey: -1760406219762.25
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                		"id": 1,
+                		"destino": "Piracicaba, SP",
+                		"partida": "Rio Claro, SP",
+                		"preco": 100.00,
+                		"data": "2025-10-29T14:30:00",
+                		"tempo": 2.0,
+                		"veiculo": {
+                			"id": 1
+                		},
+                		"usuario": {
+                			"id": 1
+                		}
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_47d6ef6b85054f65872016cdd0a01d8e
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_09cb00d425414b299248d40e11a41240
+              - name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_617feac0eefa49dbb7f8cdab159fc196
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/viagens/3
+            name: Deletar Postagem
+            meta:
+              id: req_ffbf1f9d48284ba887e524b6ad5481db
+              created: 1760453618482
+              modified: 1761754620187
+              isPrivate: false
+              description: ""
+              sortKey: -1760412371603.375
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_c06feccdd0ba4143a112061ce27d3142
+              - name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_a3a2a275cd594b2d864d23e785803cee
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/viagens/destino/pira
+            name: Procurar por Destino
+            meta:
+              id: req_5afa5d6cb9914464b85f8cf989eb3220
+              created: 1761752708321
+              modified: 1761754185402
+              isPrivate: false
+              description: ""
+              sortKey: -1761752708321
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_c42b580a0e5d41239822cc7fabd9b10d
+              - id: pair_fdb7576dc7e14e578e02570edca1f9d0
+                name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/viagens/partida/sp
+            name: Procurar por Partida
+            meta:
+              id: req_5d0f566ac70b47cfa92a77b31c74adb8
+              created: 1761752743054
+              modified: 1761754375147
+              isPrivate: false
+              description: ""
+              sortKey: -1761752646778
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_558ceb46dbee42c7bf2ad580085e8fee
+              - id: pair_effb678f7a234f94a18fc95c3f046aea
+                name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/viagens
+            name: Criar Viagem
+            meta:
+              id: req_f752e07394fa4c91bddb8a98ea6cc73d
+              created: 1761752966773
+              modified: 1761754476391
+              isPrivate: false
+              description: ""
+              sortKey: -1761752966773
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"destino": "Piracicaba, SP",
+                	"partida": "Leme, SP",
+                	"preco": 100.00,
+                	"data": "2025-10-29T14:30:00",
+                	"tempo": 2,
+                	"veiculo": {
+                		"id": 1
+                	},
+                	"usuario": {
+                		"id": 1
+                	}
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_1d79518257404f15a14929627a318bc3
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_c5bda4312ce44dd799e1b88b3192269d
+              - id: pair_0be1abd201f24e0f858d958dfe122916
+                name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/viagens
+            name: Listar Todas
+            meta:
+              id: req_74944397b93e4d3dbc67baaa28f35f24
+              created: 1761754501496
+              modified: 1761754538010
+              isPrivate: false
+              description: ""
+              sortKey: -1761754501496
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_d81581ca5c6f493c80a688f6d79c3855
+              - id: pair_288bc828b0e9478883861d536dfea977
+                name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/viagens/1/calcular-tempo
+            name: Calcular Tempo
+            meta:
+              id: req_b4c7aee74da64618bbb455e3f6d72687
+              created: 1761758629307
+              modified: 1761759145905
+              isPrivate: false
+              description: ""
+              sortKey: -1761758629307
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "distancia": 150
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_4c4ce626ed2e4f5db9ee91040abfd27d
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_2e34693445ef4d84a6c025a961b72107
+              - id: pair_7c36db734d0f4ab5a4b222bb410ed57e
+                name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Veiculo
+        meta:
+          id: fld_1debe57ee93b4322bfbac109c40dd853
+          created: 1760545655484
+          modified: 1761745259974
+          sortKey: -1761503512372
+          description: ""
+        children:
+          - url: http://localhost:8080/veiculos
+            name: Listar Todos
+            meta:
+              id: req_6e936487e44a436e9b278a88665b21c3
+              created: 1760545655485
+              modified: 1761752501913
+              isPrivate: false
+              description: ""
+              sortKey: -1760451360137
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_17b5db7ecf01423cae52b423a94ebb52
+              - name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_e4a0d6af5173465b8f267b742cb73a2a
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/veiculos/3
+            name: Procurar por ID
+            meta:
+              id: req_4a8093baaf0047a086201c64bfccfd86
+              created: 1760545655486
+              modified: 1761752507338
+              isPrivate: false
+              description: ""
+              sortKey: -1760451360087
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_885974b1af3a44e588b02ef8ea1fac70
+              - name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_b0845b1bf8e349208eebc0dcece62467
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/veiculos
+            name: Criar Veiculo
+            meta:
+              id: req_67816ecf5a65466880372934cdcb8bc7
+              created: 1760545655487
+              modified: 1761747552069
+              isPrivate: false
+              description: ""
+              sortKey: -1760447724354
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "modelo": "XPTO teste",
+                  "foto": "----",
+                  "placa": "XPTOUo"
+                }
+            parameters:
+              - name: ""
+                value: ""
+                disabled: false
+                id: pair_8e29eb50fa474f2e8a2e52ba0aa03981
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_de0fec80a84d44a68718e0ba3f104916
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_d6c1bbae2c4140bba1178afdd331a882
+              - name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_7a439c31603a41d19e4fdcf0daa4525b
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/veiculos
+            name: Atualizar Veiculo
+            meta:
+              id: req_c6076b5d96c347f4ad80dfe874c82b7a
+              created: 1761747129777
+              modified: 1761747427686
+              isPrivate: false
+              description: ""
+              sortKey: -1761747129777
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "id": 3,
+                	"modelo": "XPTO Update",
+                  "foto": "----",
+                  "placa": "XPTO"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_64907ac9d9284f97bca265ad8d815ff7
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_df087794ec4f4d6a8ee4e29293f94380
+              - id: pair_6e93f0f5df5749248b2ad62fc5ec1231
+                name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/veiculos/placa/u
+            name: Procurar por Placa
+            meta:
+              id: req_f6b01e2d90ae4bb6960834065b5c130a
+              created: 1761747450827
+              modified: 1761747574417
+              isPrivate: false
+              description: ""
+              sortKey: -1761747450827
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_522a9af5486747a280ea7128f772977b
+              - id: pair_bdec7b499817492081c001bb5ad1d2de
+                name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/veiculos/3
+            name: Deletar Veiculo
+            meta:
+              id: req_9fe62408380140fa95d3cc9a5a5aa90e
+              created: 1761752585235
+              modified: 1761752633237
+              isPrivate: false
+              description: ""
+              sortKey: -1761752585235
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_5dbc74b1b6b04cb98a53108a753da740
+              - id: pair_373fbeb3560f44be94861aa7b32fc93c
+                name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Usuario
+        meta:
+          id: fld_0606b3ead09f4206aa580989346d8392
+          created: 1760970683930
+          modified: 1761745270066
+          sortKey: -1761503512472
+          description: ""
+        children:
+          - url: http://localhost:8080/usuarios/cadastrar
+            name: Criar Usuario
+            meta:
+              id: req_018631b364b14a97874d64657ae33349
+              created: 1760970704745
+              modified: 1761746270605
+              isPrivate: false
+              description: ""
+              sortKey: -1760970932553
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nome": "Root 2",
+                  "email": "root@email.com.br",
+                  "senha": "rootroot",
+                	"foto": "-"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/all
+            name: Listar Todos os Usuarios
+            meta:
+              id: req_d10be8fb84644f5daf01a14a2095c1a0
+              created: 1760970932503
+              modified: 1761746193904
+              isPrivate: false
+              description: ""
+              sortKey: -1760970932503
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_7d222e5cfe2a4d1d8215de9bb32e2d71
+              - name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_b94ffa51d77b4bfe9b1e5bce0d3e80e5
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/1
+            name: Procurar Usuario por ID
+            meta:
+              id: req_49d79732c4f642aa98d59370f09ead96
+              created: 1760971125392
+              modified: 1761746223402
+              isPrivate: false
+              description: ""
+              sortKey: -1760970818624
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_e054601e28af4a3892480c94f6673a61
+              - name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_7627da01bde1438e898ced4627d52c75
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/logar
+            name: Autenticar Usuario
+            meta:
+              id: req_c0bbbd65962f4acd849975273c3f69aa
+              created: 1760973544436
+              modified: 1761759151442
+              isPrivate: false
+              description: ""
+              sortKey: -1760970932603
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email": "root@root.com.br",
+                	"senha": "rootroot"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/atualizar
+            name: Atualizar Usuario
+            meta:
+              id: req_3c0d6619474b47238f8596f526543bc6
+              created: 1760973776108
+              modified: 1761746314686
+              isPrivate: false
+              description: ""
+              sortKey: -1760956460819.75
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 2,
+                	"nome": "Administrador Test",
+                	"email": "deploy@prod.com.br",
+                	"senha": "admin123",
+                	"foto": "-"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_8de662cba38e4e0882e84c3823605abc
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_98f8d991b0224106baaac25e72c3afcd
+              - name: Authorization
+                value: "{% response 'body', 'req_c0bbbd65962f4acd849975273c3f69aa',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_0686a6f8ab184a73a62d0662b001a95f
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+  - name: RENDER
+    meta:
+      id: fld_f29f0f297f224bd88b0b70694c34f77d
+      created: 1761756680792
+      modified: 1761756680792
+      sortKey: -1761419847001
+      description: ""
+    children:
+      - name: Viagens
+        meta:
+          id: fld_d9a65783105e45d7b38714bbec211390
+          created: 1761756680793
+          modified: 1761756680793
+          sortKey: -1761503512272
+          description: ""
+        children:
+          - url: https://gotogether-backend.onrender.com/viagens/1
+            name: Procurar por ID
+            meta:
+              id: req_b7d3f9bb7cbd4ed3828236bbc4d37c00
+              created: 1761756680794
+              modified: 1761757472932
+              isPrivate: false
+              description: ""
+              sortKey: -1760418523444.5
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_1c203921de5746fa98670d3a05ddfc0a
+              - name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_1c3bcf1db40748a49db4c439bf852a92
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/viagens
+            name: Atualizar Viagem
+            meta:
+              id: req_8e0055e31676479699a88265bba80906
+              created: 1761756680796
+              modified: 1761757902184
+              isPrivate: false
+              description: ""
+              sortKey: -1760406219762.25
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                		"id": 1,
+                		"destino": "Araras, SP",
+                		"partida": "Leme, SP",
+                		"preco": 100.00,
+                		"data": "2025-10-29T14:30:00",
+                		"tempo": 2.0,
+                		"veiculo": {
+                			"id": 1
+                		},
+                		"usuario": {
+                			"id": 1
+                		}
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_47d6ef6b85054f65872016cdd0a01d8e
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_09cb00d425414b299248d40e11a41240
+              - name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_617feac0eefa49dbb7f8cdab159fc196
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/viagens/4
+            name: Deletar Viagem
+            meta:
+              id: req_7719fbb486484d298a914c21262aa385
+              created: 1761756680798
+              modified: 1761757897221
+              isPrivate: false
+              description: ""
+              sortKey: -1760412371603.375
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_c06feccdd0ba4143a112061ce27d3142
+              - name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_a3a2a275cd594b2d864d23e785803cee
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/viagens/destino/pira
+            name: Procurar por Destino
+            meta:
+              id: req_2518bc9516ea48f7932a5a8dcf102b5e
+              created: 1761756680800
+              modified: 1761757466091
+              isPrivate: false
+              description: ""
+              sortKey: -1761752708321
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_c42b580a0e5d41239822cc7fabd9b10d
+              - id: pair_fdb7576dc7e14e578e02570edca1f9d0
+                name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/viagens/partida/rio
+            name: Procurar por Partida
+            meta:
+              id: req_68a168b9c4cc4c04a74a140f39dbe3ee
+              created: 1761756680801
+              modified: 1761757616893
+              isPrivate: false
+              description: ""
+              sortKey: -1761752646778
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_558ceb46dbee42c7bf2ad580085e8fee
+              - id: pair_effb678f7a234f94a18fc95c3f046aea
+                name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/viagens
+            name: Criar Viagem
+            meta:
+              id: req_77a2303ff7f848d58e2e44594edee483
+              created: 1761756680802
+              modified: 1761757570618
+              isPrivate: false
+              description: ""
+              sortKey: -1761752966773
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"destino": "Araras, SP",
+                	"partida": "Rio Claro, SP",
+                	"preco": 100.00,
+                	"data": "2025-10-29T14:30:00",
+                	"tempo": 2,
+                	"veiculo": {
+                		"id": 3
+                	},
+                	"usuario": {
+                		"id": 3
+                	}
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_1d79518257404f15a14929627a318bc3
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_c5bda4312ce44dd799e1b88b3192269d
+              - id: pair_0be1abd201f24e0f858d958dfe122916
+                name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/viagens
+            name: Listar Todas
+            meta:
+              id: req_3fd701967e284181a95a8b320fc0a373
+              created: 1761756680804
+              modified: 1761757463101
+              isPrivate: false
+              description: ""
+              sortKey: -1761754501496
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_d81581ca5c6f493c80a688f6d79c3855
+              - id: pair_288bc828b0e9478883861d536dfea977
+                name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Veiculo
+        meta:
+          id: fld_6347a2d8baa24da9bd945d91767fe7b6
+          created: 1761756680805
+          modified: 1761756680805
+          sortKey: -1761503512372
+          description: ""
+        children:
+          - url: https://gotogether-backend.onrender.com/veiculos
+            name: Listar Todos
+            meta:
+              id: req_b309178931ec4333b41e78fb64acd841
+              created: 1761756680806
+              modified: 1761757076142
+              isPrivate: false
+              description: ""
+              sortKey: -1760451360137
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_17b5db7ecf01423cae52b423a94ebb52
+              - name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_e4a0d6af5173465b8f267b742cb73a2a
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/veiculos/3
+            name: Procurar por ID
+            meta:
+              id: req_997deea226e14583852083184f3833d5
+              created: 1761756680808
+              modified: 1761757079187
+              isPrivate: false
+              description: ""
+              sortKey: -1760451360087
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_885974b1af3a44e588b02ef8ea1fac70
+              - name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_b0845b1bf8e349208eebc0dcece62467
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/veiculos
+            name: Criar Veiculo
+            meta:
+              id: req_936b2a913c0849d8ae842e37efe2b7c5
+              created: 1761756680809
+              modified: 1761757158692
+              isPrivate: false
+              description: ""
+              sortKey: -1760447724354
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "modelo": "T4EST3",
+                  "foto": "----",
+                  "placa": "T4ESTE"
+                }
+            parameters:
+              - name: ""
+                value: ""
+                disabled: false
+                id: pair_8e29eb50fa474f2e8a2e52ba0aa03981
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_de0fec80a84d44a68718e0ba3f104916
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_d6c1bbae2c4140bba1178afdd331a882
+              - name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_7a439c31603a41d19e4fdcf0daa4525b
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/veiculos
+            name: Atualizar Veiculo
+            meta:
+              id: req_136c396b914647cb9e294a8bff8ec5aa
+              created: 1761756680811
+              modified: 1761757311904
+              isPrivate: false
+              description: ""
+              sortKey: -1761747129777
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "id": 1,
+                	"modelo": "XPTO Update",
+                  "foto": "----",
+                  "placa": "XPTO"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_64907ac9d9284f97bca265ad8d815ff7
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_df087794ec4f4d6a8ee4e29293f94380
+              - id: pair_6e93f0f5df5749248b2ad62fc5ec1231
+                name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/veiculos/placa/t
+            name: Procurar por Placa
+            meta:
+              id: req_cab88b24dca6418695d0590d1883c1a0
+              created: 1761756680813
+              modified: 1761757229160
+              isPrivate: false
+              description: ""
+              sortKey: -1761747450827
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_522a9af5486747a280ea7128f772977b
+              - id: pair_bdec7b499817492081c001bb5ad1d2de
+                name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/veiculos/2
+            name: Deletar Veiculo
+            meta:
+              id: req_988a04253b224368b83c560c5614e1c3
+              created: 1761756680814
+              modified: 1761757259890
+              isPrivate: false
+              description: ""
+              sortKey: -1761752585235
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_5dbc74b1b6b04cb98a53108a753da740
+              - id: pair_373fbeb3560f44be94861aa7b32fc93c
+                name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Usuario
+        meta:
+          id: fld_9a3a319469cb49158d0cc47a1536ae9a
+          created: 1761756680816
+          modified: 1761756680816
+          sortKey: -1761503512472
+          description: ""
+        children:
+          - url: https://gotogether-backend.onrender.com/usuarios/cadastrar
+            name: Criar Usuario
+            meta:
+              id: req_ced8837825e94c618840ef672fee3197
+              created: 1761756680817
+              modified: 1761756836746
+              isPrivate: false
+              description: ""
+              sortKey: -1760970932553
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nome": "Cintia Dourado",
+                  "email": "cintia@email.com.br",
+                  "senha": "rootroot",
+                	"foto": "-"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/usuarios/all
+            name: Listar Todos os Usuarios
+            meta:
+              id: req_d5dc130835d94b119d790437f6df0795
+              created: 1761756680818
+              modified: 1761757057751
+              isPrivate: false
+              description: ""
+              sortKey: -1760970932503
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_7d222e5cfe2a4d1d8215de9bb32e2d71
+              - name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_b94ffa51d77b4bfe9b1e5bce0d3e80e5
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/usuarios/1
+            name: Procurar Usuario por ID
+            meta:
+              id: req_04131b0e0f55418797bdc1cd6040e1ab
+              created: 1761756680820
+              modified: 1761756896887
+              isPrivate: false
+              description: ""
+              sortKey: -1760970818624
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_e054601e28af4a3892480c94f6673a61
+              - name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_7627da01bde1438e898ced4627d52c75
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/usuarios/logar
+            name: Autenticar Usuario
+            meta:
+              id: req_ba33ce43595b470ea0a23eebdcad3b84
+              created: 1761756680821
+              modified: 1761756736213
+              isPrivate: false
+              description: ""
+              sortKey: -1760970932603
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email": "root@root.com.br",
+                	"senha": "rootroot"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://gotogether-backend.onrender.com/usuarios/atualizar
+            name: Atualizar Usuario
+            meta:
+              id: req_c0411c5d76af44b9aead5a4d143aa901
+              created: 1761756680822
+              modified: 1761756942855
+              isPrivate: false
+              description: ""
+              sortKey: -1760956460819.75
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 2,
+                	"nome": "Admininstrador Update",
+                	"email": "admin@email.com.br",
+                	"senha": "admin123",
+                	"foto": "-"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_8de662cba38e4e0882e84c3823605abc
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_98f8d991b0224106baaac25e72c3afcd
+              - name: Authorization
+                value: "{% response 'body', 'req_ba33ce43595b470ea0a23eebdcad3b84',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                id: pair_0686a6f8ab184a73a62d0662b001a95f
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_8cc21fba9226a09104f571919ca88f7f07e40dfe
+    created: 1761746050712
+    modified: 1761746050712
+environments:
+  name: Base Environment
+  meta:
+    id: env_8cc21fba9226a09104f571919ca88f7f07e40dfe
+    created: 1761746050708
+    modified: 1761746050708
+    isPrivate: false
